@@ -81,6 +81,64 @@ For custom data formats (Vessel IMU, GNSS positioning, and dual-antenna heading)
 
 These files are located in the `data/message_definitions/` directory of the dataset.
 
+### MCAP Metadata Files
+
+**Each MCAP file is accompanied by a metadata file** that provides essential configuration and calibration information:
+
+#### Metadata Contents
+
+1. **mmWave Radar Configuration** (for each radar topic)
+   - **Topic Name**: ROS2 topic identifier
+   - **Maximum Range**: Maximum detection distance (meters)
+   - **Range Resolution**: Distance measurement precision (meters)
+   - **Maximum Velocity**: Maximum detectable Doppler velocity (m/s)
+   - **Velocity Resolution**: Velocity measurement precision (m/s)
+   - **CFAR Threshold**: Constant False Alarm Rate detection threshold
+
+2. **Sensor Mounting Positions** (for each sensor topic)
+   - **Topic Name**: ROS2 topic identifier
+   - **Position**: 3D coordinates on the vessel (x, y, z in meters)
+   - **Orientation**: Rotation angles (roll, pitch, yaw in degrees)
+   - **Sensor Type**: LiDAR, radar, camera, IMU, GNSS, etc.
+
+**Metadata File Format**: JSON or YAML format with structured sensor information
+
+**Example Metadata Structure**:
+```json
+{
+  "sequence_id": "sequence_001",
+  "sensors": {
+    "/radar_front_1": {
+      "type": "mmwave_radar",
+      "configuration": {
+        "max_range": 100.0,
+        "range_resolution": 0.15,
+        "max_velocity": 25.0,
+        "velocity_resolution": 0.1,
+        "cfar_threshold": 12.0
+      },
+      "mounting": {
+        "position": {"x": 2.5, "y": 0.0, "z": 1.8},
+        "orientation": {"roll": 0.0, "pitch": 0.0, "yaw": 0.0}
+      }
+    },
+    "/lidar_avia": {
+      "type": "lidar",
+      "mounting": {
+        "position": {"x": 2.3, "y": 0.0, "z": 1.9},
+        "orientation": {"roll": 0.0, "pitch": 0.0, "yaw": 0.0}
+      }
+    }
+  }
+}
+```
+
+**Usage**: This metadata is essential for:
+- Understanding radar waveform configurations
+- Performing sensor fusion with correct transformations
+- Interpreting detection ranges and velocities
+- Calibrating multi-sensor systems
+
 ### 1. LiDAR Data
 
 #### Livox AVIA LiDAR
