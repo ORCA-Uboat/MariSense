@@ -1,0 +1,171 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Dataset files (large files should not be committed)
+data/sequences/
+data/annotations/detection/*.json
+data/annotations/tracking/*.json
+data/annotations/odometry/*.json
+*.bag
+*.pcd
+*.bin
+*.h5
+*.hdf5
+
+# Keep directory structure but ignore large files
+!data/sequences/.gitkeep
+!data/annotations/.gitkeep
+
+# Model checkpoints and weights
+*.pth
+*.pt
+*.ckpt
+*.weights
+*.h5
+checkpoints/
+weights/
+models/saved/
+
+# Results and outputs
+results/
+outputs/
+runs/
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Documentation builds
+docs/_build/
+docs/_static/
+docs/_templates/
+site/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ROS
+devel/
+build/
+*.bag
+
+# Compiled files
+*.pyc
+*.pyo
+*.so
+*.dll
+*.dylib
+
+# Large media files (keep samples only)
+*.mp4
+*.avi
+*.mov
+*.mkv
+!assets/videos/demo_sample.mp4
+
+# Compressed files
+*.zip
+*.tar.gz
+*.tar
+*.rar
+
+# Backup files
+*.bak
+*.backup
