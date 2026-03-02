@@ -4,6 +4,10 @@
 
 The object tracking component of MariSense provides image sequences with frame-by-frame annotations for tracking maritime objects. The dataset includes synchronized thermal and low-light camera images with bounding box annotations that maintain object identities across frames.
 
+### Dataset download
+
+The dataset can be downloaded from the [official website](https://orca-tech.cn/datasets/MariSense/Introduction). We also provide [some sample data](https://nas.orca-tech.cn:5000/sharing/lWI1Hq2np)
+
 ### Dataset Composition
 
 The tracking dataset consists of 300 sequences captured under various maritime conditions.
