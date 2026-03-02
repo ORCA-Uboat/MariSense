@@ -8,22 +8,21 @@ The odometry component of MariSense provides multi-sensor data for ego-motion es
 
 All odometry data is stored in **ROS2 format using MCAP files**. Some data segments also include front camera images.
 
+### Dataset download
+  
+The download link for data used in the demo is:[Download](https://nas.orca-tech.cn:5000/?launchApp=SYNO.SDS.Drive.Application#file_id=936842042288421732)
+
 ### Dataset Composition
 
 The odometry dataset consists of **25 sequences** with varying durations, covering different maritime scenarios and conditions.
 
 | Sequence    | Duration      |
 | ----------- | ------------- |
-| Sequence 01 | [To be added] |
-| Sequence 02 | [To be added] |
-| Sequence 03 | [To be added] |
-| Sequence 04 | [To be added] |
-| Sequence 05 | [To be added] |
-| Sequence 06 | [To be added] |
-| Sequence 07 | [To be added] |
-| Sequence 08 | [To be added] |
-| Sequence 09 | [To be added] |
-| Sequence 10 | [To be added] |
+| Sequence 01 | [229.5s] |
+| Sequence 02 | [229.5s] |
+| Sequence 03 | [169.7s] |
+| Sequence 04 | [198.0s] |
+
 
 ## Data Summary
 
