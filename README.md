@@ -96,12 +96,14 @@ MariSense/
 │
 ├── src/                      # Source code
 │   └── marisense/           # Main package
-│       ├── __init__.py
-│       ├── loaders/         # Data loaders
-│       ├── visualization/   # Visualization tools
-│       ├── evaluation/      # Evaluation metrics
-│       ├── converters/      # Format converters
-│       └── augmentation/    # Data augmentation
+│   │   ├── __init__.py
+│   │   ├── loaders/         # Data loaders
+│   │   ├── visualization/   # Visualization tools
+│   │   ├── evaluation/      # Evaluation metrics
+│   │   ├── converters/      # Format converters
+│   │   └── augmentation/    # Data augmentation
+│   └── tools/               # Code tools
+│       └── convert_mcap_to_frames.py    # Get sensors data from mcap file
 │
 ├── configs/                  # Configuration files
 │   └── README.md

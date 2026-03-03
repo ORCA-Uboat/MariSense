@@ -321,7 +321,7 @@ We provide parsing code to convert MCAP files into frame-based readable data for
 
 ```bash
 # Convert MCAP file to frame-based format
-python tools/convert_mcap_to_frames.py \
+python src/tools/convert_mcap_to_frames.py \
     --input data/odometry/sequence_01.mcap \
     --output data/odometry/sequence_01_frames/ \
     --sensors lidar,imu,gnss,radar
@@ -332,22 +332,51 @@ python tools/convert_mcap_to_frames.py \
 ```
 sequence_01_frames/
 ├── lidar_avia/
-│   ├── frame_000000.pcd
-│   ├── frame_000001.pcd
+│   ├── timestamp.pcd
 │   └── ...
 ├── lidar_mid360/
-│   ├── frame_000000.pcd
+│   ├── timestamp.pcd
 │   └── ...
 ├── imu/
-│   ├── lidar_imu.csv
-│   └── vessel_imu.csv
+│   ├── imu_mid360.txt
+│   ├── imu_avia.txt
+│   └── imu_vessel.txt
 ├── radar/
-│   ├── frame_000000.pcd
-│   └── ...
-├── gnss/
-│   └── gnss_data.csv
-├── timestamps.txt
-└── metadata.json
+│   ├── 0
+│   │  ├── timestamp.pcd
+│   │  └── ...
+│   ├── 1
+│   │  ├── timestamp.pcd
+│   │  └── ...
+│   ├── 2
+│   │  ├── timestamp.pcd
+│   │  └── ...
+│   ├── 3
+│   │  ├── timestamp.pcd
+│   │  └── ...
+│   ├── 4
+│   │  ├── timestamp.pcd
+│   │  └── ...
+│   ├── 5
+│   │  ├── timestamp.pcd
+│   │  └── ...
+│   ├── 6
+│   │  ├── timestamp.pcd
+│   │  └── ...
+│   ├── 7
+│   │  ├── timestamp.pcd
+│   │  └── ...
+│   ├── 8
+│   │  ├── timestamp.pcd
+│   │  └── ...
+│   └── 9
+│     ├── timestamp.pcd
+│     └── ...
+├── gps/
+│   └── gps.txt
+└── gpsrover/
+    └── gpsrover.txt
+
 ```
 
 ### Environmental Conditions
